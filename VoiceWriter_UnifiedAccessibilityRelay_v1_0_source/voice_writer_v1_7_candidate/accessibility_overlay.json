@@ -1,0 +1,13 @@
+{
+  "comment": "Local-only options for the Unified Accessibility Relay.",
+  "tts": {
+    "enabled": true,
+    "output_device_selector": "Soundcore"
+  },
+  "conversation": {
+    "enabled": false,
+    "endpoint": "http://127.0.0.1:11434/api/chat",
+    "model": "qwen3:4b",
+    "system_prompt": "Give a concise, plain-language explanation. State uncertainty when relevant."
+  }
+}

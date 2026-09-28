@@ -1,0 +1,57 @@
+{
+  "comment": "WPT + kaiku_reader configuration",
+  "timestamp": "2026-08-02T12:00:00Z",
+
+  "microphone": {
+    "comment": "Device selection. Tries name first, falls back to index.",
+    "device_name_patterns": [
+      "Q45",
+      "Rode",
+      "Headset Microphone"
+    ],
+    "device_index_fallback": 15,
+    "sample_rate": 16000,
+    "channels": 1,
+    "chunk_size": 512
+  },
+
+  "whisper": {
+    "comment": "Faster-Whisper STT settings",
+    "model": "base.en",
+    "language": "en",
+    "device": "auto",
+    "compute_type": "int8"
+  },
+
+  "piper": {
+    "comment": "Piper TTS settings",
+    "voice_model": "D:\\Whisper_PushToTalk_Sandbox\\voices\\en_US-bryce-medium.onnx",
+    "sample_rate": 22050,
+    "length_scale": 1.0,
+    "noise_scale": 0.667,
+    "noise_w": 0.8
+  },
+
+  "hotkeys": {
+    "comment": "Keyboard bindings",
+    "wpt_record": "f8",
+    "wpt_confirm": "f9",
+    "reader_speak": "f7",
+    "exit": "esc"
+  },
+
+  "typing": {
+    "comment": "F9 auto-type safety settings",
+    "enabled": true,
+    "window_check": "disabled",
+    "delay_ms": 10
+  },
+
+  "logging": {
+    "comment": "Output and audit trail",
+    "level": "INFO",
+    "console": true,
+    "file": "D:\\Whisper_PushToTalk_Sandbox\\logs\\wpt.log",
+    "audit_file": "D:\\Whisper_PushToTalk_Sandbox\\logs\\wpt_audit.log"
+  }
+}
